@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 const Btn = styled.button`  
   display: inline-block;
   background-color: ${(props) => props.theme.text};
@@ -37,8 +38,8 @@ const Btn = styled.button`
 `;
 const Button = ({ text, link }) => {
   return (
-    <Btn>
-      <a href={link} aria-label={text} target="_blank" rel="noreferrer">
+    <Btn onClick={() => window.open(link)}>
+      <a aria-label={text} rel="noreferrer">
         {text}
       </a>
     </Btn>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Button from "./Button";
+
 const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.body};

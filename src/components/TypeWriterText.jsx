@@ -40,7 +40,8 @@ const SubTitle = styled.h3`
   font-size: ${(props) => props.theme.fontlg};
   color: ${(props) => `rgba(${props.theme.textRgba},0.6)`};
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   width: 80%;
   align-self: flex-start;
 `;
@@ -74,9 +75,9 @@ const TypeWriterText = () => {
           }}
         />
       </Title>
-      <SubTitle>Welcome to my Website</SubTitle>
+      <SubTitle>See My GitHub</SubTitle>
       <ButtonContainer>
-        <Button text="About Me" link="#about"></Button>
+        <Button text="GitHub" link="https://github.com/H3X-T"></Button>
       </ButtonContainer>
     </>
   );
