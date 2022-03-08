@@ -24,6 +24,8 @@ const Title = styled.h1`
   margin: 1rem auto;
   border-bottom: 2px solid #f6416c;
   width: fit-content;
+  @media (max-width: 40em) {
+    font-size: ${(props) => props.theme.fontxl};
 `;
 const Container = styled.div`
   width: 70%;
@@ -34,6 +36,13 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (max-width: 64em) {
+    width: 80%;
+  }
+
+  @media (max-width: 48em) {
+    width: 90%;
+  }
 `;
 
 const SvgContainer = styled.div`
@@ -43,20 +52,34 @@ const SvgContainer = styled.div`
 `;
 
 const Items = styled.ul`
+  display: flex;
   list-style: none;
   width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 48em) {
+    width: 90%;
+  }
+
   & > *:nth-of-type(2n + 1) {
     justify-content: start;
+    @media (max-width: 48em) {
+      justify-content: center;
+    }
 
     div {
       border-radius: 50px 0 50px 0;
       text-align: right;
+      @media (max-width: 48em) {
+        border-radius: 0 50px 0 50px;
+        text-align: left;
+        p {
+          border-radius: 0 40px 0 40px;
+        }
+      }
     }
 
     p {
@@ -66,6 +89,9 @@ const Items = styled.ul`
 
   & > *:nth-of-type(2n) {
     justify-content: end;
+    @media (max-width: 48em) {
+      justify-content: center;
+    }
     div {
       border-radius: 0 50px 0 50px;
       text-align: left;
@@ -81,12 +107,20 @@ const Item = styled.li`
   width: 100%;
   height: 100%;
   display: flex;
+
+  @media (max-width: 48em) {
+    justify-content: flex-end !important;
+  }
 `;
+
 const ItemContainer = styled.div`
   width: 40%;
   height: fit-content;
   padding: 1rem;
   border: 3px solid #f5af19;
+  @media (max-width: 48em) {
+    width: 70%;
+  }
 `;
 
 const Box = styled.p`
@@ -101,6 +135,10 @@ const Box = styled.p`
     height: 100px;
     margin: 20px;
   }
+
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontlg};
+    font-weight: 600;
 `;
 
 const EducationItem = ({ title, subtext, img, addToRef }) => {
@@ -132,7 +170,11 @@ const SubTitle = styled.span`
   font-size: ${(props) => props.theme.fontxl};
   color: #ff4e00;
   margin: 0 20px;
+  @media (max-width: 40em) {
+    font-size: ${(props) => props.theme.fontlg};
+    font-weight: 600;
 `;
+
 const Text = styled.span`
   display: block;
   font-size: ${(props) => props.theme.fontlg};
@@ -147,6 +189,8 @@ const Text = styled.span`
     -webkit-background-clip: text;
     -webkit-box-decoration-break: clone;
   }
+  @media (max-width: 40em) {
+    font-size: ${(props) => props.theme.fontxs};
 `;
 
 const Educations = () => {

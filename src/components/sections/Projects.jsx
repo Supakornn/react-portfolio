@@ -20,6 +20,9 @@ const Title = styled.h1`
   margin: 1rem auto;
   border-bottom: 2px solid #f6416c;
   width: fit-content;
+  @media (max-width: 40em) {
+    font-size: ${(props) => props.theme.fontxl}
+  }
 `;
 
 const Container = styled.div`
@@ -28,6 +31,14 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  @media (max-width: 64em) {
+    width: 80%;
+  }
+  @media (max-width: 48em) {
+    width: 90%;
+    justify-content: center;
+  }
 `;
 const Item = styled.div`
   width: calc(20rem - 4vw);
@@ -47,6 +58,9 @@ const Item = styled.div`
     img {
       transform: translateY(-2rem) scale(1.2);
     }
+  }
+  @media (max-width: 30em) {
+    width: 70vw;
   }
 `;
 
@@ -76,7 +90,8 @@ const Subtitle = styled.h2`
   align-items: center;
   justify-content: center;
   color: ${(props) => `rgba(${props.theme.textRgba},0.9)`};
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 20px;
 `;
 
 const ProjectComponent = ({ img, name = "", subtitle = "", link = "" }) => {
@@ -96,16 +111,16 @@ const Projects = () => {
       <Confetti />
       <Title>Projects</Title>
       <Container>
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
-        <ProjectComponent img={p1} name="p1" subtitle="founder" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
       </Container>
     </Section>
   );

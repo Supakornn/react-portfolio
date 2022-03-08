@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Button from "./Button";
@@ -15,24 +15,55 @@ const NavBar = styled.nav`
   width: 85%;
   height: ${(props) => props.theme.navHeight};
   margin: 0 auto;
+
+  .mobile {
+    display: none;
+  }
+
+  @media (max-width: 64em) {
+    .desktop {
+      display: none;
+    }
+
+    .mobile {
+      display: inline-block;
+    }
+  }
 `;
 
 const Menu = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  list-style: none;
+  @media (max-width: 64em) {
+    position: fixed;
+    top: ${(props) => props.theme.navHeight};
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: ${(props) => `calc(100vh - ${props.theme.navHeight})`};
+    z-index: 50;
+    background-color: ${(props) => `rgba(${props.theme.bodyRgba}, 0.85)`};
+    backdrop-filter: blur(2px);
+    transform: ${(props) => (props.isclick ? "translateY(0)" : "translateY(-150%)")};
+    transition: all 0.3s ease;
+    flex-direction: column;
+    justify-content: center;
+    touch-action: none;
+  }
 `;
 
 const MenuItem = styled.li`
   margin: 0 2rem;
-  list-style: none;
+  cursor: pointer;
   font-size: ${(props) => props.theme.fontlg};
   background-image: linear-gradient(60deg, #b92b27, #1565c0);
   color: black;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-box-decoration-break: clone;
-  cursor: pointer;
 
   &::after {
     content: "";
@@ -45,25 +76,88 @@ const MenuItem = styled.li`
   &:hover::after {
     width: 100%;
   }
+
+  @media (max-width: 64em) {
+    margin: 1rem 0;
+
+    &::after {
+      display: none;
+    }
+  } ;
 `;
+
+const HamburgerMenu = styled.span`
+  width: ${(props) => (props.isclick ? "2rem" : "1.5rem")};
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: ${(props) =>
+    props.isclick ? "translateX(-50%) rotate(90deg)" : "translateX(-50%) rotate(0)"};
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  @media (max-width: 64em) {
+    display: flex;
+  }
+
+  &::before,
+  &::after {
+    content: " ";
+    width: ${(props) => (props.isclick ? "1rem" : "1.5rem")};
+    height: 2px;
+    right: ${(props) => (props.isclick ? "-2px" : "0")};
+    background: black;
+    position: absolute;
+    bottom: ${(props) => (props.isclick ? "0.3rem" : "0.5rem")};
+    transform: ${(props) => (props.isclick ? "rotate(40deg)" : "rotate(0)")};
+  }
+
+  &::before {
+    content: " ";
+    width: ${(props) => (props.isclick ? "1rem" : "1.5rem")};
+    height: px;
+    background: black;
+    position: absolute;
+    top: ${(props) => (props.isclick ? "0.3rem" : "0.5rem")};
+    transform: ${(props) => (props.isclick ? "rotate(-40deg)" : "rotate(0)")};
+  }
+`;
+
 const Nav = () => {
+  const [click, setClick] = useState(false);
   const scrollTo = (id) => {
     let element = document.getElementById(id);
 
     element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+
+    setClick(!click);
   };
+
   return (
     <Section id="nav">
       <NavBar>
         <Logo />
-        <Menu>
+        <HamburgerMenu isclick={click} onClick={() => setClick(!click)}>
+          &nbsp;
+        </HamburgerMenu>
+        <Menu isclick={click}>
           <MenuItem onClick={() => scrollTo("nav")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("education")}>Educations</MenuItem>
           <MenuItem onClick={() => scrollTo("certificates")}>Certificates</MenuItem>
           <MenuItem onClick={() => scrollTo("projects")}>Projects</MenuItem>
+          <div className="mobile">
+            <Button text="Support Me" link="https://ko-fi.com/supakorn" />
+          </div>
         </Menu>
-        <Button text="Support Me" link="https://ko-fi.com/supakorn"></Button>
+        <div className="desktop">
+          <Button text="Support Me" link="https://ko-fi.com/supakorn" />
+        </div>
       </NavBar>
     </Section>
   );

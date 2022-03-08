@@ -51,9 +51,16 @@ const Section = styled.section`
   position: relative;
   & > *:nth-of-type(2n + 1) {
     animation-duration: 20s;
+
+    @media (max-width: 30em) {
+      animation-duration: 15s;
+    }
   }
   & > *:nth-of-type(2n) {
     animation-duration: 15s;
+    @media (max-width: 30em) {
+      animation-duration: 10s;
+    }
   }
 `;
 
@@ -79,6 +86,12 @@ const ImageContainer = styled.div`
   border-radius: 20px;
   cursor: pointer;
   overflow: hidden;
+  @media (max-width: 48em) {
+    width: 12rem;
+  }
+  @media (max-width: 30em) {
+    width: 10rem;
+  }
   img {
     width: 100%;
     height: 100%;

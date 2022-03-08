@@ -24,6 +24,10 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
+
+  @media (max-width: 64em) {
+    width: 90%;
+  } ;
 `;
 
 const Left = styled.div`
@@ -31,6 +35,9 @@ const Left = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 64em) {
+    width: 100%;
+  } ;
 `;
 
 const IconList = styled.div`
@@ -54,6 +61,9 @@ const MenuItem = styled.ul`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1rem;
+  @media (max-width: 64em) {
+    display: none;
+  } ;
 `;
 
 const Item = styled.li`
@@ -82,6 +92,13 @@ const Buttom = styled.div`
   a {
     text-decoration: underline;
   }
+  @media (max-width: 64em) {
+    flex-direction: column;
+    width: 100%;
+    span {
+      margin-bottom: 1rem;
+    }
+  } ;
 `;
 const Footer = () => {
   const scrollTo = (id) => {
