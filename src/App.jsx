@@ -8,6 +8,7 @@ import Educations from "./components/sections/Educations";
 import Certificates from "./components/sections/Certificates";
 import Projects from "./components/sections/Projects";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
         <Certificates />
         <Projects />
         <Footer />
+        <ScrollToTop />
       </ThemeProvider>
     </>
   );

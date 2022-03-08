@@ -84,6 +84,11 @@ const Buttom = styled.div`
   }
 `;
 const Footer = () => {
+  const scrollTo = (id) => {
+    let element = document.getElementById(id);
+
+    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  };
   return (
     <Section id="footer">
       <Banner />
@@ -106,11 +111,11 @@ const Footer = () => {
           </IconList>
         </Left>
         <MenuItem>
-          <Item>Home</Item>
-          <Item>About</Item>
-          <Item>Education</Item>
-          <Item>Certificates</Item>
-          <Item>Projects</Item>
+          <Item onClick={() => scrollTo("nav")}>Home</Item>
+          <Item onClick={() => scrollTo("about")}>About</Item>
+          <Item onClick={() => scrollTo("education")}>Educations</Item>
+          <Item onClick={() => scrollTo("certificates")}>Certificates</Item>
+          <Item onClick={() => scrollTo("projects")}>Projects</Item>
         </MenuItem>
       </Container>
       <Buttom>

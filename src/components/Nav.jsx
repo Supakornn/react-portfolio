@@ -57,7 +57,7 @@ const Nav = () => {
       <NavBar>
         <Logo />
         <Menu>
-          <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
+          <MenuItem onClick={() => scrollTo("nav")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("education")}>Educations</MenuItem>
           <MenuItem onClick={() => scrollTo("certificates")}>Certificates</MenuItem>
