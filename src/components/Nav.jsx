@@ -47,16 +47,21 @@ const MenuItem = styled.li`
   }
 `;
 const Nav = () => {
+  const scrollTo = (id) => {
+    let element = document.getElementById(id);
+
+    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+  };
   return (
-    <Section>
+    <Section id="nav">
       <NavBar>
         <Logo />
         <Menu>
-          <MenuItem>Home</MenuItem>
-          <MenuItem>About</MenuItem>
-          <MenuItem>Educations</MenuItem>
-          <MenuItem>Certificates</MenuItem>
-          <MenuItem>Projects</MenuItem>
+          <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
+          <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
+          <MenuItem onClick={() => scrollTo("education")}>Educations</MenuItem>
+          <MenuItem onClick={() => scrollTo("certificates")}>Certificates</MenuItem>
+          <MenuItem onClick={() => scrollTo("projects")}>Projects</MenuItem>
         </Menu>
         <Button text="Support Me" link="https://ko-fi.com/supakorn"></Button>
       </NavBar>

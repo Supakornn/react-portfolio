@@ -38,6 +38,8 @@ const Item = styled.div`
   border: 2px solid black;
   border-radius: 20px;
   overflow: hidden;
+  backdrop-filter: blur(4px);
+  z-index: 5;
 
   transition: all 0.3s ease;
 
@@ -90,7 +92,7 @@ const ProjectComponent = ({ img, name = "", subtitle = "", link = "" }) => {
 };
 const Projects = () => {
   return (
-    <Section>
+    <Section id="projects">
       <Confetti />
       <Title>Projects</Title>
       <Container>

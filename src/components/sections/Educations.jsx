@@ -183,7 +183,7 @@ const Educations = () => {
   }, []);
 
   return (
-    <Section>
+    <Section id="education">
       <Title>Education</Title>
       <Container>
         <SvgContainer>

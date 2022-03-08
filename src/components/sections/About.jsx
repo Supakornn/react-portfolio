@@ -64,7 +64,7 @@ const SubTextLight = styled.p`
 
 const About = () => {
   return (
-    <Section>
+    <Section id="about">
       <Container>
         <Box>
           <Carousel />

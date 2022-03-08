@@ -116,7 +116,7 @@ const Certificates = () => {
   const Row3Ref = useRef(null);
   const Row4Ref = useRef(null);
   return (
-    <Section>
+    <Section id="certificates">
       <Title>Certificates</Title>
       <Row direction="none" ref={Row1Ref}>
         <CertItem img={img1} passRef={Row1Ref} />
