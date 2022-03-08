@@ -25,7 +25,7 @@ const Menu = styled.ul`
 
 const MenuItem = styled.li`
   margin: 0 2rem;
-  list-style-type: none;
+  list-style: none;
   font-size: ${(props) => props.theme.fontlg};
   background-image: linear-gradient(60deg, #b92b27, #1565c0);
   color: black;

@@ -1,8 +1,8 @@
 import React, { useRef, useLayoutEffect } from "react";
 import styled from "styled-components";
 import DrawSvg from "../DrawSvg";
-import img1 from "../../assets/wichai.jpg";
-import img2 from "../../assets/deb.jpg";
+import img1 from "../../assets/edupic/wichai.jpg";
+import img2 from "../../assets/edupic/deb.jpg";
 import Typewriter from "typewriter-effect";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -91,7 +91,7 @@ const ItemContainer = styled.div`
 
 const Box = styled.p`
   height: fit-content;
-  background-image: linear-gradient(135deg, #aff1da 10%, #f9ea8f 100%);
+  background-image: linear-gradient(135deg, #dfe9f3 10%, #ffffff 100%);
   color: black;
   padding: 1rem;
   postion: relative;

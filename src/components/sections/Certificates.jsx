@@ -1,49 +1,49 @@
 import React, { useRef } from "react";
 import styled, { keyframes } from "styled-components";
-import img1 from "../../assets/c1.png";
-import img2 from "../../assets/c2.png";
-import img3 from "../../assets/c3.png";
-import img4 from "../../assets/c4.png";
-import img5 from "../../assets/c5.png";
-import img6 from "../../assets/c6.png";
-import img7 from "../../assets/c7.png";
-import img8 from "../../assets/c8.png";
-import img9 from "../../assets/c9.png";
-import img10 from "../../assets/c10.png";
-import img11 from "../../assets/c11.png";
-import img12 from "../../assets/c12.png";
-import img13 from "../../assets/c13.png";
-import img14 from "../../assets/c14.png";
-import img15 from "../../assets/c15.png";
-import img16 from "../../assets/c16.png";
-import img17 from "../../assets/c17.png";
-import img18 from "../../assets/c18.png";
-import img19 from "../../assets/c19.png";
-import img20 from "../../assets/c20.png";
-import img21 from "../../assets/c21.png";
-import img22 from "../../assets/c22.png";
-import img23 from "../../assets/c23.png";
-import img24 from "../../assets/c24.png";
-import img25 from "../../assets/c25.png";
-import img26 from "../../assets/c26.png";
-import img27 from "../../assets/c27.png";
-import img28 from "../../assets/c28.png";
-import img29 from "../../assets/c29.png";
-import img30 from "../../assets/c30.png";
-import img31 from "../../assets/c31.png";
-import img32 from "../../assets/c32.png";
-import img33 from "../../assets/c33.png";
-import img34 from "../../assets/c34.png";
-import img35 from "../../assets/c35.png";
-import img36 from "../../assets/c36.png";
-import img37 from "../../assets/c37.png";
-import img38 from "../../assets/c38.png";
-import img39 from "../../assets/c39.png";
-import img40 from "../../assets/c40.png";
+import img1 from "../../assets/certpic/c1.png";
+import img2 from "../../assets/certpic/c2.png";
+import img3 from "../../assets/certpic/c3.png";
+import img4 from "../../assets/certpic/c4.png";
+import img5 from "../../assets/certpic/c5.png";
+import img6 from "../../assets/certpic/c6.png";
+import img7 from "../../assets/certpic/c7.png";
+import img8 from "../../assets/certpic/c8.png";
+import img9 from "../../assets/certpic/c9.png";
+import img10 from "../../assets/certpic/c10.png";
+import img11 from "../../assets/certpic/c11.png";
+import img12 from "../../assets/certpic/c12.png";
+import img13 from "../../assets/certpic/c13.png";
+import img14 from "../../assets/certpic/c14.png";
+import img15 from "../../assets/certpic/c15.png";
+import img16 from "../../assets/certpic/c16.png";
+import img17 from "../../assets/certpic/c17.png";
+import img18 from "../../assets/certpic/c18.png";
+import img19 from "../../assets/certpic/c19.png";
+import img20 from "../../assets/certpic/c20.png";
+import img21 from "../../assets/certpic/c21.png";
+import img22 from "../../assets/certpic/c22.png";
+import img23 from "../../assets/certpic/c23.png";
+import img24 from "../../assets/certpic/c24.png";
+import img25 from "../../assets/certpic/c25.png";
+import img26 from "../../assets/certpic/c26.png";
+import img27 from "../../assets/certpic/c27.png";
+import img28 from "../../assets/certpic/c28.png";
+import img29 from "../../assets/certpic/c29.png";
+import img30 from "../../assets/certpic/c30.png";
+import img31 from "../../assets/certpic/c31.png";
+import img32 from "../../assets/certpic/c32.png";
+import img33 from "../../assets/certpic/c33.png";
+import img34 from "../../assets/certpic/c34.png";
+import img35 from "../../assets/certpic/c35.png";
+import img36 from "../../assets/certpic/c36.png";
+import img37 from "../../assets/certpic/c37.png";
+import img38 from "../../assets/certpic/c38.png";
+import img39 from "../../assets/certpic/c39.png";
+import img40 from "../../assets/certpic/c40.png";
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
-  background-color: ${(props) => props.theme.text};
+  background-image: linear-gradient(135deg, #cbbacc 10%, #2580b3 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,23 +97,38 @@ const CertItem = ({ img, passRef }) => {
     </ImageContainer>
   );
 };
-
+const Title = styled.h1`
+  font-size: ${(props) => props.theme.fontxxl};
+  background-image: linear-gradient(135deg, #F6D242 10%, #FF52E5 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  border-bottom: 2px solid #f6416c;
+  width: fit-content;
+`;
 const Certificates = () => {
   const Row1Ref = useRef(null);
   const Row2Ref = useRef(null);
+  const Row3Ref = useRef(null);
+  const Row4Ref = useRef(null);
   return (
     <Section>
+      <Title>Certificates</Title>
       <Row direction="none" ref={Row1Ref}>
-        <CertItem img={img1} passRef={Row2Ref} />
-        <CertItem img={img2} passRef={Row2Ref} />
-        <CertItem img={img3} passRef={Row2Ref} />
-        <CertItem img={img4} passRef={Row2Ref} />
-        <CertItem img={img5} passRef={Row2Ref} />
-        <CertItem img={img6} passRef={Row2Ref} />
-        <CertItem img={img7} passRef={Row2Ref} />
-        <CertItem img={img8} passRef={Row2Ref} />
-        <CertItem img={img9} passRef={Row2Ref} />
-        <CertItem img={img10} passRef={Row2Ref} />
+        <CertItem img={img1} passRef={Row1Ref} />
+        <CertItem img={img2} passRef={Row1Ref} />
+        <CertItem img={img3} passRef={Row1Ref} />
+        <CertItem img={img4} passRef={Row1Ref} />
+        <CertItem img={img5} passRef={Row1Ref} />
+        <CertItem img={img6} passRef={Row1Ref} />
+        <CertItem img={img7} passRef={Row1Ref} />
+        <CertItem img={img8} passRef={Row1Ref} />
+        <CertItem img={img9} passRef={Row1Ref} />
+        <CertItem img={img10} passRef={Row1Ref} />
       </Row>
       <Row direction="reverse" ref={Row2Ref}>
         <CertItem img={img11} passRef={Row2Ref} />
@@ -127,29 +142,29 @@ const Certificates = () => {
         <CertItem img={img19} passRef={Row2Ref} />
         <CertItem img={img20} passRef={Row2Ref} />
       </Row>
-      <Row direction="none" ref={Row2Ref}>
-        <CertItem img={img21} passRef={Row2Ref} />
-        <CertItem img={img22} passRef={Row2Ref} />
-        <CertItem img={img23} passRef={Row2Ref} />
-        <CertItem img={img24} passRef={Row2Ref} />
-        <CertItem img={img25} passRef={Row2Ref} />
-        <CertItem img={img26} passRef={Row2Ref} />
-        <CertItem img={img27} passRef={Row2Ref} />
-        <CertItem img={img28} passRef={Row2Ref} />
-        <CertItem img={img29} passRef={Row2Ref} />
-        <CertItem img={img30} passRef={Row2Ref} />
+      <Row direction="none" ref={Row3Ref}>
+        <CertItem img={img21} passRef={Row3Ref} />
+        <CertItem img={img22} passRef={Row3Ref} />
+        <CertItem img={img23} passRef={Row3Ref} />
+        <CertItem img={img24} passRef={Row3Ref} />
+        <CertItem img={img25} passRef={Row3Ref} />
+        <CertItem img={img26} passRef={Row3Ref} />
+        <CertItem img={img27} passRef={Row3Ref} />
+        <CertItem img={img28} passRef={Row3Ref} />
+        <CertItem img={img29} passRef={Row3Ref} />
+        <CertItem img={img30} passRef={Row3Ref} />
       </Row>
-      <Row direction="reverse" ref={Row2Ref}>
-        <CertItem img={img31} passRef={Row2Ref} />
-        <CertItem img={img32} passRef={Row2Ref} />
-        <CertItem img={img33} passRef={Row2Ref} />
-        <CertItem img={img34} passRef={Row2Ref} />
-        <CertItem img={img35} passRef={Row2Ref} />
-        <CertItem img={img36} passRef={Row2Ref} />
-        <CertItem img={img37} passRef={Row2Ref} />
-        <CertItem img={img38} passRef={Row2Ref} />
-        <CertItem img={img39} passRef={Row2Ref} />
-        <CertItem img={img40} passRef={Row2Ref} />
+      <Row direction="reverse" ref={Row4Ref}>
+        <CertItem img={img31} passRef={Row4Ref} />
+        <CertItem img={img32} passRef={Row4Ref} />
+        <CertItem img={img33} passRef={Row4Ref} />
+        <CertItem img={img34} passRef={Row4Ref} />
+        <CertItem img={img35} passRef={Row4Ref} />
+        <CertItem img={img36} passRef={Row4Ref} />
+        <CertItem img={img37} passRef={Row4Ref} />
+        <CertItem img={img38} passRef={Row4Ref} />
+        <CertItem img={img39} passRef={Row4Ref} />
+        <CertItem img={img40} passRef={Row4Ref} />
       </Row>
     </Section>
   );

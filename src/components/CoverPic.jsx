@@ -1,5 +1,5 @@
 import React from "react";
-import GIF from "../assets/gif.mp4";
+import GIF from "../assets/mainvideo/main.mp4";
 import styled from "styled-components";
 
 const PicContainer = styled.div`
