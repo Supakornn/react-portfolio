@@ -11,6 +11,7 @@ const Title = styled.h2`
   span {
     text-transform: uppercase;
     font-family: "mansalva", cursive;
+    color: #f6416c;
   }
 
   #text-1 {
