@@ -17,8 +17,8 @@
 
 - Fork the repo
 - Clone repo (`git clone`)
-- Install package (`npm install`)
-- Start (`npm start`)
+- Install package (`npm install or yarn install`)
+- Start (`npm start or yarn start`)
 
 ## How to Deploy
 
