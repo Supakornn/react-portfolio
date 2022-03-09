@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const LogoText = styled.h1`
-  font-size: ${(props) => props.theme.fontxxxl};
+  font-size: ${(props) => props.theme.fontxxl};
   font-family: "mansalva", cursive;
   background-image: linear-gradient(60deg, #b92b27, #493240);
   color: black;

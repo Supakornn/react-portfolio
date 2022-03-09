@@ -20,6 +20,11 @@ const NavBar = styled.nav`
     display: none;
   }
 
+  @media (max-width: 70em) {
+    .desktop {
+      display: none;
+    }
+  }
   @media (max-width: 64em) {
     .desktop {
       display: none;
