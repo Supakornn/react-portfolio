@@ -18,7 +18,7 @@ function App() {
         <Home />
         <About />
         <Educations />
-        <Certificates />
+        {/* <Certificates /> */}
         <Projects />
         <Footer />
         <ScrollToTop />

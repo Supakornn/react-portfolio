@@ -166,9 +166,12 @@ const About = () => {
           </Title>
           <SubText>
             My name is Supakorn Ieamgomol, Aka H3X-T, Nickname Gap, <br />
-            I'm 16 years old, From Thailand.
+            I'm {new Date().getFullYear() - 2005} years old, From Thailand.
           </SubText>
-          <SubTextLight>I'm Self-Taught Developer, I start learn coding for 1 years.</SubTextLight>
+          <SubTextLight>
+            I'm Self-Taught Developer, I start learn coding for {new Date().getFullYear() - 2021}{" "}
+            years.
+          </SubTextLight>
           <ButtonContainer>
             <Button text="Contact Me" link="https://www.facebook.com/spkngap/" />
           </ButtonContainer>

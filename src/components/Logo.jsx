@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -26,9 +26,15 @@ const LogoText = styled.h1`
 `;
 
 const Logo = () => {
+  const [click, setClick] = useState(false);
+  const scrollTo = (id) => {
+    let element = document.getElementById(id);
+    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    setClick(!click);
+  };
   return (
     <LogoText>
-      <Link to="/">Supakorn.</Link>
+      <p onClick={() => scrollTo("nav")}>Supakorn.</p>
     </LogoText>
   );
 };

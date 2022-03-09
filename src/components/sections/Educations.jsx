@@ -123,18 +123,29 @@ const ItemContainer = styled.div`
   }
 `;
 
-const Box = styled.p`
+const Box = styled.div`
   height: fit-content;
   background-image: linear-gradient(135deg, #dfe9f3 10%, #ffffff 100%);
   color: black;
   padding: 1rem;
   postion: relative;
+  display:flex;
+  align-items: center;
+  jusify-content: center;
+  flex-wrap: wrap;
+
+  .title {
+    display: block !important;
+    margin-right: 85px;
+  }
+
 
   img {
     width: 150px;
     height: 100px;
     margin: 20px;
   }
+
 
   @media (max-width: 48em) {
     font-size: ${(props) => props.theme.fontlg};
@@ -147,9 +158,10 @@ const EducationItem = ({ title, subtext, img, addToRef }) => {
       <ItemContainer>
         <Box>
           <img src={img} />
-          <SubTitle>{title}</SubTitle>
-          <Text>
+          <SubTitle className="title">{title}</SubTitle>
+          <Text className="text">
             <Typewriter
+              className="writer"
               options={{
                 autoStart: true,
                 loop: true

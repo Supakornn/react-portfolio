@@ -40,7 +40,7 @@ const BtnContainer = styled.div`
   display: flex;
   width: 40%
   justify-content: flex-end;
-  font-size: ${(props) => props.theme.fontlg};
+  font-size: ${(props) => props.theme.fontxl};
   @media (max-width: 48em) {
     width: 100%;
     justify-content: center;
@@ -52,7 +52,7 @@ const Banner = () => {
     <Section>
       <Title>Contact Me</Title>
       <BtnContainer>
-        <Button text="Support Me" Link="" />
+        <Button text="H3X-T" link="https://h3x-t.xyz" />
       </BtnContainer>
     </Section>
   );

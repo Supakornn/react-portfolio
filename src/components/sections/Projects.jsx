@@ -1,7 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import p1 from "../../assets/aboutpic/1.jpg";
+import p1 from "../../assets/projects/p1.png";
+import p2 from "../../assets/projects/p2.png";
+import p3 from "../../assets/projects/p3.png";
+import p4 from "../../assets/projects/p4.png";
+import p5 from "../../assets/projects/p5.png";
 import Confetti from "../Confetti";
+import Button from "../Button";
 const Section = styled.section`
   min-height: 100vh;
   width: 100vw;
@@ -52,13 +57,6 @@ const Item = styled.div`
   backdrop-filter: blur(4px);
   z-index: 5;
 
-  transition: all 0.3s ease;
-
-  &:hover {
-    img {
-      transform: translateY(-2rem) scale(1.2);
-    }
-  }
   @media (max-width: 30em) {
     width: 70vw;
   }
@@ -67,12 +65,15 @@ const Item = styled.div`
 const ImageContainer = styled.div`
   width: 100%;
   background-color: ${(props) => props.body};
-  border-radius: 15px;
-  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+  height: 130px;
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 `;
 
 const Name = styled.h2`
@@ -89,38 +90,76 @@ const Subtitle = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props) => `rgba(${props.theme.textRgba},0.9)`};
+  color: #ff6a88;
   margin-top: 0.5rem;
   margin-bottom: 20px;
 `;
 
+const ButtonContainer = styled.div`
+  width: 80%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 64em) {
+    width: 100%;
+    button {
+      margin: 0 auto;
+    }
+  }
+`;
+
 const ProjectComponent = ({ img, name = "", subtitle = "", link = "" }) => {
   return (
-    <Item onClick={() => window.open(link)}>
+    <Item>
       <ImageContainer>
         <img src={img} alt={name} />
       </ImageContainer>
       <Name>{name}</Name>
       <Subtitle>{subtitle}</Subtitle>
+      <ButtonContainer>
+        <Button text="Github" link={link} />
+      </ButtonContainer>
     </Item>
   );
 };
+
 const Projects = () => {
   return (
     <Section id="projects">
-      <Confetti />
+      {/* <Confetti /> */}
       <Title>Projects</Title>
       <Container>
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
-        <ProjectComponent img={p1} name="project1" subtitle="Not now" link="" />
+        <ProjectComponent
+          img={p1}
+          name="Portfolio Website"
+          subtitle="React"
+          link="https://github.com/H3X-T/supakorn.xyz"
+        />
+        <ProjectComponent
+          img={p2}
+          name="Bio"
+          subtitle="HTML CSS JS"
+          link="https://github.com/H3X-T/h3x-t.xyz"
+        />
+        <ProjectComponent
+          img={p3}
+          name="Portfolio Website"
+          subtitle="React"
+          link="https://github.com/H3X-T/react-portfolio-web"
+        />
+        <ProjectComponent
+          img={p4}
+          name="CountDown Web"
+          subtitle="HTML CSS JS"
+          link="https://github.com/H3X-T/countdown"
+        />
+        <ProjectComponent
+          img={p5}
+          name="Portfolio Website"
+          subtitle="HTML CSS JS"
+          link="https://github.com/H3X-T/personal-portfolio-website"
+        />
       </Container>
     </Section>
   );

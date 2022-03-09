@@ -154,7 +154,7 @@ const Nav = () => {
           <MenuItem onClick={() => scrollTo("nav")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("education")}>Educations</MenuItem>
-          <MenuItem onClick={() => scrollTo("certificates")}>Certificates</MenuItem>
+          {/* <MenuItem onClick={() => scrollTo("certificates")}>Certificates</MenuItem> */}
           <MenuItem onClick={() => scrollTo("projects")}>Projects</MenuItem>
           <div className="mobile">
             <Button text="Support Me" link="https://ko-fi.com/supakorn" />
