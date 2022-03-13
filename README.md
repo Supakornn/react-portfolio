@@ -24,7 +24,10 @@ git clone https://github.com/H3X-T/supakorn.xyz/
 ```
 npm install or yarn install
 ```
-- Start (`npm start or yarn start`)
+- Start 
+```
+npm start or yarn start
+```
 
 ## How to Deploy
 
