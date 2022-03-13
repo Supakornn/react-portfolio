@@ -31,8 +31,11 @@ npm start or yarn start
 
 ## How to Deploy
 
-- Build project (`npm run build`)
-- Deploy to your hosting
+- Build project 
+```
+npm run build or yarn build
+```
+- Deploy
 
 ## Support
 
