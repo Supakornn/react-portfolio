@@ -16,8 +16,14 @@
 ### Need Node.js to run this project
 
 - Fork the repo
-- Clone repo (`git clone`)
-- Install package (`npm install or yarn install`)
+- Clone repo
+```
+git clone https://github.com/H3X-T/supakorn.xyz/
+```
+- Install package
+```
+npm install or yarn install
+```
 - Start (`npm start or yarn start`)
 
 ## How to Deploy
