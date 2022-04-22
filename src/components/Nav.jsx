@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Logo from "./Logo";
 import Button from "./Button";
-
 const Section = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme.body};
@@ -136,10 +135,8 @@ const HamburgerMenu = styled.span`
 const Nav = () => {
   const [click, setClick] = useState(false);
   const scrollTo = (id) => {
-    let element = document.getElementById(id);
-
-    element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-
+    let element = document.querySelector(id);
+    element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
     setClick(!click);
   };
 
@@ -151,11 +148,11 @@ const Nav = () => {
           &nbsp;
         </HamburgerMenu>
         <Menu isclick={click}>
-          <MenuItem onClick={() => scrollTo("nav")}>Home</MenuItem>
-          <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
-          <MenuItem onClick={() => scrollTo("education")}>Educations</MenuItem>
+          <MenuItem onClick={() => scrollTo("#nav")}>Home</MenuItem>
+          <MenuItem onClick={() => scrollTo("#about")}>About</MenuItem>
+          <MenuItem onClick={() => scrollTo("#education")}>Educations</MenuItem>
           {/* <MenuItem onClick={() => scrollTo("certificates")}>Certificates</MenuItem> */}
-          <MenuItem onClick={() => scrollTo("projects")}>Projects</MenuItem>
+          <MenuItem onClick={() => scrollTo("#projects")}>Projects</MenuItem>
           <div className="mobile">
             <Button text="Support Me" link="https://ko-fi.com/supakorn" />
           </div>

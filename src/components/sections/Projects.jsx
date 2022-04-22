@@ -5,7 +5,8 @@ import p2 from "../../assets/projects/p2.png";
 import p3 from "../../assets/projects/p3.png";
 import p4 from "../../assets/projects/p4.png";
 import p5 from "../../assets/projects/p5.png";
-import Confetti from "../Confetti";
+import p6 from "../../assets/projects/p6.png";
+// import Confetti from "../Confetti";
 import Button from "../Button";
 const Section = styled.section`
   min-height: 100vh;
@@ -159,6 +160,12 @@ const Projects = () => {
           name="Portfolio Website"
           subtitle="HTML CSS JS"
           link="https://github.com/H3X-T/personal-portfolio-website"
+        />
+        <ProjectComponent
+          img={p6}
+          name="Covid Tracker"
+          subtitle="React"
+          link="https://github.com/H3X-T/covid-tracker"
         />
       </Container>
     </Section>

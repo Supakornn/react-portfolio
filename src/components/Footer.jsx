@@ -113,16 +113,16 @@ const Footer = () => {
         <Left>
           <Logo />
           <IconList>
-            <a href="https://www.facebook.com/spkngap/" target="_blank" rel="noopener">
+            <a href="https://www.facebook.com/spkngap/" target="_blank" rel="noreferrer">
               <Facebook />
             </a>
-            <a href="https://www.instagram.com/supakornigm/" target="_blank" rel="noopener">
+            <a href="https://www.instagram.com/supakornigm/" target="_blank" rel="noreferrer">
               <Instagram />
             </a>
-            <a href="https://www.linkedin.com/in/supakornieamgomol/" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/supakornieamgomol/" target="_blank" rel="noreferrer">
               <LinkedIn />
             </a>
-            <a href="https://twitter.com/H3xtT" target="_blank" rel="noopener">
+            <a href="https://twitter.com/H3XxT_" target="_blank" rel="noreferrer">
               <Twitter />
             </a>
           </IconList>
@@ -136,12 +136,12 @@ const Footer = () => {
         </MenuItem>
       </Container>
       <Buttom>
-        <span>&copy; {new Date().getFullYear()} Supakorn.dev, All rights reserved.</span>
+        <span>&copy; {new Date().getFullYear()} Supakorn.xyz, All rights reserved.</span>
         <span>
           Made with &#10084; by{" "}
-          <a href="http://github.com/H3X-T" target="_blank" rel="noopener">
+          <a href="http://github.com/H3XxT" target="_blank" rel="noreferrer">
             Supakorn
-          </a>
+          </a>{" "}
         </span>
       </Buttom>
     </Section>

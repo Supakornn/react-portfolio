@@ -156,11 +156,7 @@ const About = () => {
                 loop: true
               }}
               onInit={(typewriter) => {
-                typewriter
-                  .typeString(`<span id="Title-1">About Me </span>`)
-                  .pauseFor(200)
-                  .deleteAll()
-                  .start();
+                typewriter.typeString(`<span id="Title-1">About Me </span>`).pauseFor(200).deleteAll().start();
               }}
             />
           </Title>
@@ -168,12 +164,9 @@ const About = () => {
             My name is Supakorn Ieamgomol, Aka H3X-T, Nickname Gap, <br />
             I'm {new Date().getFullYear() - 2005} years old, From Thailand.
           </SubText>
-          <SubTextLight>
-            I'm Self-Taught Developer, I start learn coding for {new Date().getFullYear() - 2021}{" "}
-            years.
-          </SubTextLight>
+          <SubTextLight>I'm Self-Taught Developer, I have many passion about coding.</SubTextLight>
           <ButtonContainer>
-            <Button text="Contact Me" link="https://www.facebook.com/spkngap/" />
+            <Button text="Contact Me" link="https://www.h3xxt.xyz" />
           </ButtonContainer>
         </Box>
       </Container>

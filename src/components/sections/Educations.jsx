@@ -157,7 +157,7 @@ const EducationItem = ({ title, subtext, img, addToRef }) => {
     <Item ref={addToRef}>
       <ItemContainer>
         <Box>
-          <img src={img} />
+          <img src={img} alt="pic" />
           <SubTitle className="title">{title}</SubTitle>
           <Text className="text">
             <Typewriter
