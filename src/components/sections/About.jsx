@@ -62,8 +62,8 @@ const Title = styled.h2`
   span {
     background-image: linear-gradient(135deg, #feb692 10%, #ea5455 100%);
     -webkit-text-fill-color: transparent;
-    background-clip: text;
-    box-decoration-break: clone;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
   }
 
   @media (max-width: 64em) {
