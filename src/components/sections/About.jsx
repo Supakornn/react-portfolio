@@ -10,7 +10,7 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  postion: relative;
+  position: relative;
 `;
 
 const Container = styled.div`
@@ -161,10 +161,10 @@ const About = () => {
             />
           </Title>
           <SubText>
-            My name is Supakorn Ieamgomol, Aka H3X-T, Nickname Gap, <br />
+            My name is Supakorn Ieamgomol, Aka H3XxT, Nickname Gap, <br />
             I'm {new Date().getFullYear() - 2005} years old, From Thailand.
           </SubText>
-          <SubTextLight>I'm Self-Taught Developer, I have many passion about coding.</SubTextLight>
+          <SubTextLight>I'm Fullstack Developer, I have many passion about coding.</SubTextLight>
           <ButtonContainer>
             <Button text="Contact Me" link="https://www.h3xxt.xyz" />
           </ButtonContainer>
