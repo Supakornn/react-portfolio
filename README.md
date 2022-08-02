@@ -15,7 +15,7 @@
 - Fork the repo
 - Clone repo
 ```
-git clone https://github.com/H3X-T/supakorn.xyz/
+git clone https://github.com/H3X-T/supakorn.xyz
 ```
 - Install package
 ```
